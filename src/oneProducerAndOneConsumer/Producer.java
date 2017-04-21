@@ -5,7 +5,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * Created by tjsun on 10/20/16.
  */
-class Producer extends Thread {
+class Producer implements Runnable {
     private ArrayBlockingQueue arrayBlockingQueue;
 
     Producer(ArrayBlockingQueue arrayBlockingQueue) {
@@ -21,7 +21,6 @@ class Producer extends Thread {
         }
     }
 
-    @Override
     public void run() {
         this.produce();
     }
